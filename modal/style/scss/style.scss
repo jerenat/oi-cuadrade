@@ -1,0 +1,548 @@
+@charset 'UTF-8';
+@import "_color";
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* The Modal (background) */
+.modal {
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $b;
+    background-color: $rb2;
+
+
+
+
+
+    /* Modal Content */
+    .modal-content {
+        position: absolute;
+        background-color: $w;
+        margin: auto;
+        transform: translateY(10%) translateX(50%);
+        border: 1px solid $w1;
+        border-radius: 4px 4px 4px 4px;
+        //width: 80%;
+        -webkit-box-shadow: 0px 0px 5px 0px $rb1;
+        -moz-box-shadow: 0px 0px 5px 0px $rb1;
+        box-shadow: 0px 0px 5px 0px $rb1;
+
+        /* CSS3.0 Animations */
+        // animation-name: zigzag-window-modal;
+        // animation-duration: .5s;
+        // -webkit-animation-name: zigzag-window-modal;
+        // -webkit-animation-duration: .5s;
+
+
+        /* Cabecera */
+
+        // con color
+        .modal-head {
+            background: $w2;
+            border-bottom: 1px solid $w1;
+            display: block;
+            padding: 7px 7px 7px 20px;
+            display: flex;
+            margin: 0 0 0 0;
+
+            .modal-title {
+                padding-top: 3px;
+                flex: 1;
+
+                span {
+                    letter-spacing: 0.01em;
+                    font-weight: 200;
+                    color: $b1;
+                }
+            }
+
+            // close button
+            .modal-close {
+
+                button {
+                    background-color: inherit;
+                    border: 0;
+                    cursor: pointer;
+                    padding: 0 3px;
+
+                    &::before {
+                        content: "\00D7";
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: $b2;
+                    }
+                }
+            }
+
+        }
+
+
+        // sin color
+        .nocolor {
+            position: relative;
+            display: block;
+            background-color: inherit;
+            border-bottom: none;
+            padding: 0 !important;
+
+            .absolut3 {
+                position: absolute;
+                right: 15px;
+                top: 5px;
+
+                button {
+                    &::before {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+
+
+
+        /* Cuerpo */
+        .modal-body {
+            //height: 200px;
+            //overflow-y: scroll;
+
+
+            /* width */
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: $w3;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: $b5;
+                border-radius: 5px 5px;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: $b3;
+            }
+
+            .preloader {
+                margin: 50px auto;
+                width: 50px;
+                height: 50px;
+                border: 10px solid #eee;
+                border-top: 10px solid #666;
+                border-radius: 50%;
+                animation-name: girar;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            .modal-inner {
+
+                .string-body {
+
+                    margin: 0 auto;
+                    padding: 20px 30px 20px 30px;
+                    text-align: center;
+
+                    span {
+                        text-align: center;
+                        line-height: 1.3em;
+                        color: $b4;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+
+    /* Modal Content - Themes */
+
+    // obscuro
+    .dark {
+
+        border: 1px solid $a1;
+
+        .modal-head {
+
+            background-color: $a1;
+
+            .modal-title {
+
+                span {
+                    color: $w4 !important;
+                }
+            }
+
+            .modal-close {
+                button {
+
+                    &::before {
+                        color: $w4;
+                    }
+                }
+            }
+        }
+
+        .modal-body {
+
+            .preloader {
+                border: 10px solid $b4;
+                border-top: 10px solid $a1;
+            }
+
+            .modal-inner {
+                color: $b6 !important;
+
+                .string-body {
+
+                    span {
+                        color: $b6 !important;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    // claro
+    .light {
+
+        border: 1px solid $w4;
+
+        .modal-head {
+
+            background-color: $w;
+
+            .modal-title {
+
+                span {
+                    color: $b3 !important;
+                }
+            }
+
+            .modal-close {
+                button {
+
+                    &::before {
+                        color: $b3;
+                    }
+                }
+            }
+        }
+
+        .modal-body {
+
+            .preloader {
+                border: 10px solid $w3;
+                border-top: 10px solid $b5;
+            }
+
+            .modal-inner {
+                color: $b3 !important;
+
+                .string-body {
+
+                    span {
+                        color: $b3 !important;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+/* CSS3.0 WebKit Animation Keyframes */
+
+// Bajada-desvanecimiento
+@keyframes init-window-modal {
+
+    0% {
+
+        margin-top: -50px;
+        opacity: 0;
+
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+
+    }
+
+}
+
+
+// Desvanecimiento
+@keyframes fade-window-modal {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+// zig zag
+@keyframes zigzag-window-modal {
+
+    0% {
+        opacity: 0;
+        left: -100px;
+    }
+
+    10% {
+        left: 100px;
+    }
+
+    20% {
+        opacity: .5;
+        left: -75px;
+    }
+
+    30% {
+        left: 75px;
+    }
+
+    40% {
+        opacity: 1;
+        left: -50px;
+    }
+
+    50% {
+        left: 50px;
+    }
+
+    60% {
+        left: -25px;
+    }
+
+    70% {
+        left: 25px;
+    }
+
+    80% {
+        left: -5px;
+    }
+
+    90% {
+        left: 5px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+@keyframes pong-window-modal {
+
+    0% {
+        margin-top: -100px;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        margin-top: 100px;
+    }
+
+    60% {
+        margin-top: 0;
+    }
+
+    80% {
+        margin-top: 50px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+
+}
+
+// Barra de inicio
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* Window CSS3.0 Alert Box */
+.div-alert {
+    position: absolute;
+    z-index: 9999;
+    top: 150px;
+    right: 20px;
+    overflow: visible;
+    width: 350px;
+
+    .a-sub-alert {
+        background-color: red;
+        display: block;
+        position: relative;
+        padding: 20px 15px;
+        text-align: center;
+
+        border:1px inset rgba(0,0,0,0.1);
+        border-radius: 4px 4px 4px 4px;
+        -moz-border-radius: 4px 4px 4px 4px;
+        -webkit-border-radius: 4px 4px 4px 4px;
+
+        -webkit-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.75);
+
+        // text
+        span {
+            line-height: 1.3em;
+            color: #f4f4f4;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        // progress-bar
+        .time-var {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 7px;
+
+
+            .progressBar {
+                height: 7px;
+                background-color: rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+
+    // Advertencia
+    .warning{
+        background-color: rgb(255, 226, 134);
+    }
+
+    // Correcto
+    .ok{
+        background-color: rgb(120, 218, 140);
+    }
+
+    // Error
+    .error{
+        background-color: rgb(237, 93, 134);
+    }
+
+    // Otros
+    .visible{
+        background-color: rgb(181, 120, 218);
+    }
+
+    // Default
+    .default{
+        background-color: rgb(138, 213, 241 );
+        border: none;
+        span{
+            color:white;
+        }
+        .time-var{
+            //border-top: 1px solid rgba(0,0,0,0.1);
+        }
+    }
+}
+
+
+// Carga y Salida
+.load-js{
+    animation-name: loadingAlertBoxCSS;
+    animation-duration: .5s;
+}
+
+.exit-js{
+    animation-name: ExitsAlertBoxCSS;
+    animation-duration: .5s;
+}
+
+
+@keyframes loadingAlertBoxCSS {
+    0%{
+        right: 0px;
+        opacity: 0;
+    }
+
+    50%{
+
+        opacity: 1;
+        right: 60px;
+
+    }
+
+    80%{
+
+        right: 0px;
+
+    }
+
+    100%{
+        right: 20px;
+    }
+    
+}
+
+@keyframes ExitsAlertBoxCSS {
+    
+    0%{
+        right: 20px;
+    }
+
+    50%{
+        
+        right: 0px;
+        
+    }
+
+    80%{
+        
+        opacity: 1;
+        right: 60px;
+        
+    }
+    100%{
+        right: 0px;
+        opacity: 0;
+    }
+}
