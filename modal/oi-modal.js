@@ -889,29 +889,13 @@ class myModal {
 
     // onClick
 
-    click(element) {
-
-        if (element) {
-            $(element).on("click", () => {
-                this._preload()
-            })
-        }
-
+    click() {
+        this._preload();
     };
 
     // onLoad
     load() {
-        $(window).on('load', () => {
-            this._preload()
-        })
+        this._preload()
     };
-
-};
-
-
-// Nueva variable
-var OIModal = a => {
-
-    return new myModal(a);
 
 };
