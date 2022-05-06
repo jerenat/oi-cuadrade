@@ -50,6 +50,7 @@ const $alert = new AlertBox({
     time: $time,        // Segundos (s)
     body: $d.body,      // Cuerpo donde se agregará
     type: 'error',      // Estilo de alert-box
+    close: boolean      // Cerrar dialog (true|false)
 });
 
 $alert.init();
@@ -66,6 +67,7 @@ class AlertBox {
             this.time = o.time;                 // Tiempo de eliminado
             this.element = o.body;              // Elemento donde se agregará
             this.type = o.type;                 // Tipo de dialogo
+            this.close = o.close;               // Opcion de cerrado
 
         } else {
 
@@ -146,6 +148,16 @@ class AlertBox {
 
     };
 
+
+
+     // Cuadro de cerrado
+     _setClose(){
+         if(this.close && this.time){
+             this.time = false;
+
+             
+         }
+     }
 
 
     // Dialogo
