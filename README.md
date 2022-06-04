@@ -10,7 +10,7 @@ Se ha notado grandemente la modificación desde la versión `1.0` hasta la `1.1`
 Acontinuación se muestran las comparaciones con **Vanilla JS** y el módulo **OI JS**:
 
 
-### Funcion "onload":
+### Funcion `onload`
 
 Vanilla js:
 ```js
