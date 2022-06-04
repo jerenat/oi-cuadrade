@@ -3,6 +3,8 @@ Origin Interface Cuadrade, un JavaScript minificado
 
 *OI Cuadrade* es un simple archivo de Javascript que permite simplificar el código escrito, para que sea mas accesible al programar.
 
+Se ha notado grandemente la modificación desde la versión `1.0` hasta la `1.1`, agregando nuevas caracteristicas y muchisimas mejoras de codigo, las cuales, demuestran el progreso de la programación el dicha área.
+
 ## Como se usa
 
 Acontinuación se muestran las comparaciones con **Vanilla JS** y el módulo **OI JS**:
