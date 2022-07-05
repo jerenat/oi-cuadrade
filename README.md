@@ -1,6 +1,6 @@
 # Origin Interface Cuadrade
 
-![logotipo] ./logo.png
+![logotipo](./logo.png)
 
 Origin Interface Cuadrade, un JavaScript minificado
 
