@@ -1,8 +1,8 @@
 # Origin Interface Cuadrade
 
-![logotipo](./logo.png)
+Framework Javascript para código simple e interfaces de usuario
 
-Origin Interface Cuadrade, un JavaScript minificado
+![logotipo](./logo.png)
 
 *OI Cuadrade* es un simple archivo de Javascript que permite simplificar el código escrito, para que sea mas accesible al programar.
 
