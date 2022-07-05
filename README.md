@@ -146,3 +146,7 @@ $(element).off("click", (event) => {
 	...
 });
 ```
+
+# license
+
+[MIT](./LICENSE)
