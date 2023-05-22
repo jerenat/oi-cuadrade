@@ -2,7 +2,10 @@
 
 Framework Javascript para código simple e interfaces de usuario
 
-![logotipo](./logo.png)
+
+<p align="center">
+	<img src="./logo.png" alt="OI LOGOTYPE">
+</p>
 
 *OI Cuadrade* es un simple archivo de Javascript que permite simplificar el código escrito, para que sea mas accesible al programar.
 
